@@ -1,0 +1,12 @@
+.input-area {
+    /* Estilos iniciales */
+    width: 100%;
+    transition: height 0.8s ease; /* Agregar una transición suave */
+    height: 90vh; /* Establecer el tamaño completo de la pantalla */
+  }
+  
+.small-input-area {
+    /* Estilos para el tamaño pequeño */
+    width: auto;
+    height: 18vh; /* Cambiar el tamaño a una pequeña porción de la pantalla */
+}

@@ -1,0 +1,18 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.content-tags{
+    display : grid;
+    width: 100%;
+    grid-template-columns: repeat(auto-fit, minmax(300px,1fr));
+    gap: 1rem; 
+    margin: 2rem 0;
+}
+
+.input-selection{
+    display : grid;
+    width: 100%;
+    grid-template-columns: repeat(auto-fit, minmax(300px,1fr));
+    gap: 1rem; 
+}
