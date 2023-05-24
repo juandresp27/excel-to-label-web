@@ -19,7 +19,7 @@ import useFilter from './hooks/useFilter';
 
 function App() {
 
-  const {workbook, sheetChoosed, setSheetChoosed, filters, setFilters} = useContext(PositionContext)
+  const {workbook, sheetChoosed, setSheetChoosed, filters, setFilters, setSelectedRow} = useContext(PositionContext)
   const {sheets} = useSheets({workbook})
   const {jsonResult} = useSheetToJson({sheets, sheetChoosed})
 
@@ -42,6 +42,7 @@ function App() {
             selectedOption={Object.keys(sheetChoosed)}
             handelChange={(event) => {
               setSheetChoosed(Object.fromEntries(Object.entries(sheets).filter(([key]) => key === event)))
+              setSelectedRow(null)
               }}
             />
           </div>
