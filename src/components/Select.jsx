@@ -93,7 +93,7 @@ const Select = ({
                                 <span
                                   className={`${
                                     selected ? 'font-semibold' : 'font-normal'
-                                  } flex items-center block truncate`}
+                                  } flex items-center truncate`}
                                 >
                                   {option}
                                 </span>
