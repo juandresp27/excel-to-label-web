@@ -1,11 +1,11 @@
-import { useState, useEffect } from "react"
+import { useState, useEffect } from 'react'
 
-export function useSheets({workbook}){
-    const[sheets, setSheets] = useState([])
+export function useSheets ({ workbook }) {
+  const [sheets, setSheets] = useState([])
 
-    useEffect(()=>{
+  useEffect(() => {
     setSheets(workbook.Sheets || [])
-    },[workbook])
+  }, [workbook])
 
-    return {sheets}
+  return { sheets }
 }

@@ -6,6 +6,6 @@ import { PositionProvider } from './Positions.jsx'
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <PositionProvider>
-    <App /> 
+    <App />
   </PositionProvider>
 )

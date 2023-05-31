@@ -1,39 +1,38 @@
 // External Dependencies
-import React from "react";
-import { Listbox, Transition } from "@headlessui/react";
-
+import React from 'react'
+import { Listbox, Transition } from '@headlessui/react'
 
 const Selector = () => (
-  
+
   <svg
-    className="h-5 w-5 text-[#301c6a]"
-    xmlns="http://www.w3.org/2000/svg"
-    viewBox="0 0 20 20"
-    fill="currentColor"
-    aria-hidden="true"
+    className='h-5 w-5 text-[#301c6a]'
+    xmlns='http://www.w3.org/2000/svg'
+    viewBox='0 0 20 20'
+    fill='currentColor'
+    aria-hidden='true'
   >
     <path
-      fillRule="evenodd"
-      d="M10 3a1 1 0 01.707.293l3 3a1 1 0 01-1.414 1.414L10 5.414 7.707 7.707a1 1 0 01-1.414-1.414l3-3A1 1 0 0110 3zm-3.707 9.293a1 1 0 011.414 0L10 14.586l2.293-2.293a1 1 0 011.414 1.414l-3 3a1 1 0 01-1.414 0l-3-3a1 1 0 010-1.414z"
-      clipRule="evenodd"
+      fillRule='evenodd'
+      d='M10 3a1 1 0 01.707.293l3 3a1 1 0 01-1.414 1.414L10 5.414 7.707 7.707a1 1 0 01-1.414-1.414l3-3A1 1 0 0110 3zm-3.707 9.293a1 1 0 011.414 0L10 14.586l2.293-2.293a1 1 0 011.414 1.414l-3 3a1 1 0 01-1.414 0l-3-3a1 1 0 010-1.414z'
+      clipRule='evenodd'
     />
   </svg>
-);
+)
 
 const Selected = () => (
   <svg
-    className="h-5 w-5 text-[#301c6a]"
-    xmlns="http://www.w3.org/2000/svg"
-    viewBox="0 0 20 20"
-    fill="currentColor"
+    className='h-5 w-5 text-[#301c6a]'
+    xmlns='http://www.w3.org/2000/svg'
+    viewBox='0 0 20 20'
+    fill='currentColor'
   >
     <path
-      fillRule="evenodd"
-      clipRule="evenodd"
-      d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+      fillRule='evenodd'
+      clipRule='evenodd'
+      d='M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z'
     />
   </svg>
-);
+)
 
 const Select = ({
   /* label, */
@@ -43,36 +42,36 @@ const Select = ({
 }) => {
   return (
     <Listbox
-      as="div"
-      //className={className}
+      as='div'
+      // className={className}
       value={selectedOption}
       onChange={(event) => {
-        handelChange(event);
+        handelChange(event)
       }}
     >
       {({ open }) => (
         <>
-        
-          <div className="relative mt-1">
-            <span className="inline-block w-full rounded-md shadow-sm">
-              <Listbox.Button className="cursor-default relative w-full rounded-md border border-gray-300 bg-white pl-3 pr-10 py-2 text-left  transition ease-in-out duration-150">
-                <span className="block truncate text-[#301c6a]">{selectedOption}</span>
-                <span className="absolute inset-y-0 right-0 flex items-center pr-2 ml-3 pointer-events-none">
+
+          <div className='relative mt-1'>
+            <span className='inline-block w-full rounded-md shadow-sm'>
+              <Listbox.Button className='cursor-default relative w-full rounded-md border border-gray-300 bg-white pl-3 pr-10 py-2 text-left  transition ease-in-out duration-150'>
+                <span className='block truncate text-[#301c6a]'>{selectedOption}</span>
+                <span className='absolute inset-y-0 right-0 flex items-center pr-2 ml-3 pointer-events-none'>
                   <Selector />
                 </span>
               </Listbox.Button>
             </span>
-            <div className="absolute z-10 w-full mt-1 bg-white rounded-md shadow-lg mb-11">
+            <div className='absolute z-10 w-full mt-1 bg-white rounded-md shadow-lg mb-11'>
               {/* bottom-0 will open the select menu up & mb-11 will put the dropup above the select option */}
               <Transition
                 show={open}
-                leave="transition duration-100 ease-in"
-                leaveFrom="transform opacity-100"
-                leaveTo="transform opacity-0"
+                leave='transition duration-100 ease-in'
+                leaveFrom='transform opacity-100'
+                leaveTo='transform opacity-0'
               >
                 <Listbox.Options
                   static
-                  className="py-1 overflow-auto text-base rounded-md max-h-56 ring-1 ring-black ring-opacity-5 focus:outline-none sm:text-sm"
+                  className='py-1 overflow-auto text-base rounded-md max-h-56 ring-1 ring-black ring-opacity-5 focus:outline-none sm:text-sm'
                 >
                   {options.map((option, index) => {
                     return (
@@ -86,14 +85,14 @@ const Select = ({
                             <li
                               className={`${
                                 active
-                                  ? "text-white bg-[#301c6a]"
-                                  : "text-[#301c6a]"
+                                  ? 'text-white bg-[#301c6a]'
+                                  : 'text-[#301c6a]'
                               } cursor-default select-none relative py-2 pl-3 pr-9`}
                             >
-                              <div className="flex items-center">
+                              <div className='flex items-center'>
                                 <span
                                   className={`${
-                                    selected ? "font-semibold" : "font-normal"
+                                    selected ? 'font-semibold' : 'font-normal'
                                   } flex items-center block truncate`}
                                 >
                                   {option}
@@ -101,7 +100,7 @@ const Select = ({
                                 {selected && (
                                   <span
                                     className={`${
-                                      active ? "text-gray-900" : "text-indigo-600"
+                                      active ? 'text-gray-900' : 'text-indigo-600'
                                     } absolute inset-y-0 right-0 flex items-center mr-3 pl-1.5`}
                                   >
                                     <Selected />
@@ -109,10 +108,10 @@ const Select = ({
                                 )}
                               </div>
                             </li>
-                          );
+                          )
                         }}
                       </Listbox.Option>
-                    );
+                    )
                   })}
                 </Listbox.Options>
               </Transition>
@@ -121,7 +120,7 @@ const Select = ({
         </>
       )}
     </Listbox>
-  );
-};
+  )
+}
 
-export default Select;
+export default Select
