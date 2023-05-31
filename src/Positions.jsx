@@ -8,6 +8,7 @@ export function PositionProvider ({ children }) {
   const [sheetChoosed, setSheetChoosed] = useState([])
   const [selectedRow, setSelectedRow] = useState(null) // New state for selected row
   const [filters, setFilters] = useState([])
+  const [excelFileName, setExcelFileName] = useState(null)
 
   return (
     <PositionContext.Provider
@@ -21,7 +22,9 @@ export function PositionProvider ({ children }) {
         selectedRow,
         setSelectedRow,
         filters,
-        setFilters
+        setFilters,
+        excelFileName,
+        setExcelFileName
       }}
     >
       {children}

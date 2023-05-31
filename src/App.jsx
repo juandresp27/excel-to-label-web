@@ -16,7 +16,7 @@ import { useSheetToJson } from './hooks/useSheetToJson'
 import useFilter from './hooks/useFilter'
 
 function App () {
-  const { workbook, sheetChoosed, setSheetChoosed, filters, setFilters, setSelectedRow } = useContext(PositionContext)
+  const { workbook, sheetChoosed, setSheetChoosed, filters, setFilters, setSelectedRow, excelFileName } = useContext(PositionContext)
   const { sheets } = useSheets({ workbook })
   const { jsonResult } = useSheetToJson({ sheets, sheetChoosed })
 
@@ -35,10 +35,11 @@ function App () {
         workbook.length !== 0
           ? (
             <div className='flex flex-col items-center justify-center p-2'>
+              <h3 className='text-[#2F1C6A]'>{excelFileName}</h3>
               {
                 sheetChoosed.length !== 0
                   ? (<></>)
-                  : (<p className='justify-center pt-2'>Choose a sheet</p>)
+                  : (<p className='justify-center pt-2 text-[#301c6a67] italic text-sm'>Choose a sheet</p>)
               }
               <div className='w-full max-w-xs mx-auto'>
                 <Select
