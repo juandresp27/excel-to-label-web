@@ -87,7 +87,7 @@ export function Download ({ TextsPosition, JsonResult, RowSelected, Size, Header
         className='flex item1 items-center gap-1 bg-[#301c6a] text-white hover:bg-[#432797] mt-1 w-fit px-3 py-1 rounded-xl text-justify'
         type='button'
       >
-        <img src='pdf17.svg' width={18} height={18} alt='' /> Etiqueta única
+        <img src='pdf17.svg' width={18} height={18} alt='' /> Row single label
       </button>
 
       <button
@@ -95,7 +95,7 @@ export function Download ({ TextsPosition, JsonResult, RowSelected, Size, Header
         className='flex  items-center gap-1 bg-[#301c6a] text-white hover:bg-[#432797] my-1 w-fit px-3 py-1 rounded-xl text-justify'
         type='button'
       >
-        <img src='pdf17.svg' width={18} height={18} alt='' /> Etiqueta según Field
+        <img src='pdf17.svg' width={18} height={18} alt='' /> Row qty field
       </button>
 
       <button
@@ -103,7 +103,7 @@ export function Download ({ TextsPosition, JsonResult, RowSelected, Size, Header
         className='flex  items-center gap-1 bg-[#301c6a] text-white hover:bg-[#432797] my-1 w-fit px-3 py-1 rounded-xl text-justify'
         type='button'
       >
-        <img src='pdf17.svg' width={18} height={18} alt='' /> Todas
+        <img src='pdf17.svg' width={18} height={18} alt='' /> All qty field
       </button>
 
     </div>

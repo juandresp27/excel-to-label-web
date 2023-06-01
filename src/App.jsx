@@ -1,5 +1,6 @@
 import './App.css'
-import { tagsOptions, columsOptions } from './config'
+import { columsOptions } from './config'
+import toast, { Toaster } from 'react-hot-toast'
 
 import { useContext, useEffect } from 'react'
 
@@ -25,6 +26,34 @@ function App () {
   useEffect(() => {
     workbook.length !== 0 && jsonResult.length !== 0 && setFilters(new Array(Object.keys(jsonResult[0]).length).fill(''))
   }, [jsonResult])
+
+  useEffect(() => {
+    if (sheetChoosed.length !== 0) {
+      toast.success('Sheet Imported, select a row in table', {
+        duration: 3000,
+        position: 'buttom-right',
+
+        // Styling
+        style: {
+          background: '#301c6a67',
+          color: '#fff'
+        },
+        className: '',
+
+        // Change colors of success/error/loading icon
+        iconTheme: {
+          primary: '#429649',
+          secondary: '#fff'
+        },
+
+        // Aria
+        ariaProps: {
+          role: 'status',
+          'aria-live': 'polite'
+        }
+      })
+    }
+  }, [sheetChoosed])
 
   return (
     <>
@@ -70,12 +99,12 @@ function App () {
             {jsonResult && (
               <CanvasControls
                 tags={filteredJsonResult}
-                tagsOptions={tagsOptions}
                 columsOptions={columsOptions}
               />)}
           </aside>
         </section>
       )}
+      <Toaster />
     </>
   )
 }

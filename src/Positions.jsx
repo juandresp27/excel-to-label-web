@@ -9,7 +9,7 @@ export function PositionProvider ({ children }) {
   const [selectedRow, setSelectedRow] = useState(null) // New state for selected row
   const [filters, setFilters] = useState([])
   const [excelFileName, setExcelFileName] = useState(null)
-
+  const [tagSize, setTagSize] = useState([302, 113])
   return (
     <PositionContext.Provider
       value={{
@@ -24,7 +24,9 @@ export function PositionProvider ({ children }) {
         filters,
         setFilters,
         excelFileName,
-        setExcelFileName
+        setExcelFileName,
+        tagSize,
+        setTagSize
       }}
     >
       {children}

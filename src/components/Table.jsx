@@ -26,7 +26,7 @@ export function Table ({ JsonInput, Position }) {
                     headers.map((header, index) => (
                       <th
                         key={index}
-                        className='sticky top-0 p-2 pl-3 pt-3 pb-3 text-left text-[#fff] bg-[#5d43ac] border-b border-[#301c6a67]'
+                        className='sticky top-0 pl-3 pt-3 pb-3 text-left text-[#fff] bg-[#5d43ac] border-b border-[#301c6a67]'
                       >
                         <input
                           onChange={(e) => {
@@ -35,7 +35,7 @@ export function Table ({ JsonInput, Position }) {
                             setFilters(updatedFilters)
                           }}
                           placeholder={`${header}`}
-                          className='w-20 bg-[#dcdcff] text-zinc-800 rounded-[0.2rem]'
+                          className='w-full bg-[#6952ad] text-zinc-800 rounded-[0.2rem] text-center placeholder-[#ffffffc4] focus:placeholder-[#ffffff7d] focus:text-[#fff]'
                         />
                       </th>
                     ))
@@ -63,7 +63,7 @@ export function Table ({ JsonInput, Position }) {
               <tr
                 key={index}
                 onClick={() => handleClickTable(index)}
-                className={`hover:bg-[#c8b6ff9f] cursor-pointer ${
+                className={`text-center hover:bg-[#c8b6ff9f] cursor-pointer ${
                   selectedRow === index ? 'bg-[#bba4ffb7]' : '' // Add the conditional background color
                 }`}
               >
