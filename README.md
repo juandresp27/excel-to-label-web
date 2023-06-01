@@ -11,5 +11,5 @@ XLSX, jsPDF modules are used to work in this, and its development with react.
 
 ## Demo
 
-![](https://i.ibb.co/Tkk0YwZ/fb60d1cb-d839-4476-9e42-29330afae1e4.gif)
+![](https://github.com/juandresp27/excel-to-label-web/blob/main/example-excel/fb60d1cb-d839-4476-9e42-29330afae1e4.gif)
 
